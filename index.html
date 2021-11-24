@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMM</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>SMM</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Услуги" onclick="slowScroll('#main')">Услуги</a>
+            <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+            <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">FAQ</a>
+            <a href="#" title="О нас" onclick="slowScroll('#aboutus')">О нас</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Социлаьный маркетинг</h1>
+        <h3>как смысл жизни!</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+        <h2>Наши услуги помогут вам!</h2>
+        <span>У нас есть большой набор услуг, который поможет вам достичь цели</span>
+        </div>
+        <div class="text">
+          <span>Наша компания по маркетингу продвигает абсолютно любых людей</span>  
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Наши преимущества</h2>
+        <h3>С нами гораздо быстрее</h3>
+
+        <div class="img">
+            <img src="https://images.satu.kz/128698654_w640_h640_smm-prodvizhenie.jpg" alt="">
+            <span>Быстрое продвижение в соц. сетях</span>
+        </div>
+        <div class="img">
+            <img src="https://1nsk.ru/wp-content/uploads/2018/04/smm.jpg" alt="">
+            <span>Плановое продвижение во всех сферах</span>
+        </div>
+    </div>
+
+    <div id="contacts">
+        <center><h5>Обратная связь</h5></center>
+        <form id="form_input">
+          <label for="name">Имя <span>*</span></label><br>
+          <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+          <label for="email">Ваша почта <span>*</span></label><br>
+                <input type="email" placeholder="Введите email" name="email" id="email"><br>
+                <label for="message">Сообщение <span>*</span></label><br>
+                <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+                <div id="mess_send" class="btn">Отправить</div>
+        </form>
+      </div>
+
+
+<div id="faq">
+    <div>
+      <span class="title">Частые вопросы</span><br>
+      <span class="heading">Как это может мне помочь?</span>
+      <p>Наши специалисты смогут помочь вам запустить свой аккаунт и раскрутить его, благодаря нашей качественной рекламе.</p>
+      <span class="heading">Какие плюсы пользоваться SMM?</span>
+      <p>С помощью наших услуг вы сможете более быстро стать известным(-ой) в социальных сетях, из-за чего вам будет легче продавать ваш продукт.</p>
+      <span class="heading">Почему мы?</span>
+      <p>Наша компания находится в этой сфере уже давно, более 10 лет. Наша компания знает все плюсы и минусы различных стратегий, что позволяет вам как клиенту получать самые качетсвенные услуги, которые позволят вам быстро развиваться.</p>
+    </div>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function slowScroll(id) {
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
+        }, 500);
+    }
+
+    $(document).on("scroll", function() {
+    if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed");
+    });
+</script>
+
+</body>
+
+</html>
